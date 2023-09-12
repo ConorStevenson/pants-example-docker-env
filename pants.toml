@@ -1,0 +1,27 @@
+[GLOBAL]
+pants_version = "2.17.0"
+
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.docker",
+]
+
+[source]
+root_patterns = [
+  '/src',
+]
+
+[python]
+interpreter_constraints = ["CPython==3.8.*"]
+enable_resolves = true
+
+
+[docker]
+env_vars = [
+  "DOCKER_CONFIG=%(homedir)s/.docker",
+  "HARDCODED=VALUE",
+  "WHITELISTED",
+]
+
+[environments-preview.names]
+local_docker = ":local_docker"

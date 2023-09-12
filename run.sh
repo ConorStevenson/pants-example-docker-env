@@ -1,0 +1,3 @@
+export WHITELISTED=VALUE
+export NOT_WHITELISTED=VALUE
+pants test ::
